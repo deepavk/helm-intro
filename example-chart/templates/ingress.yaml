@@ -1,12 +1,12 @@
 {{- if .Values.ingress.enabled -}}
-{{- $serviceName := include "flask-chart.fullname" . -}}
+{{- $serviceName := include "example-chart.fullname" . -}}
 {{- $servicePort := .Values.service.externalPort -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ template "flask-chart.fullname" . }}
+  name: {{ template "example-chart.fullname" . }}
   labels:
-    app: {{ template "flask-chart.name" . }}
+    app: {{ template "example-chart.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
