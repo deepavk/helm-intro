@@ -17,6 +17,6 @@ $kubectl --namespace default port-forward $POD_NAME 8080:5000
 (ingress enabled is false here)
 
 To debug helm templates:
-helm lint 
-helm template --debug chart-folder
+* helm lint 
+* helm template --debug chart-folder
 
